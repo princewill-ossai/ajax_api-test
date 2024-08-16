@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex AJAX Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 800px;
+        }
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .post h3 {
+            margin: 0 0 5px;
+        }
+        .post p {
+            margin: 0;
+        }
+        .delete-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        #loading {
+            display: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Complex AJAX Example</h1>
+
+    <form id="addPostForm">
+        <h2>Add New Post</h2>
+        <input type="text" id="title" placeholder="Title" required>
+        <textarea id="body" placeholder="Body" required></textarea>
+        <button type="submit">Add Post</button>
+    </form>
+
+    <h2>Posts</h2>
+    <div id="loading">Loading...</div>
+    <div id="posts"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/script_folder/app.js"></script>
+
+</body>
+</html>
+

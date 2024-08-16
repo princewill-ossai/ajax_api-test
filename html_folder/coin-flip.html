@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #coin {
+            width: 150px;
+            height: 150px;
+            transition: transform 0.5s ease;
+        }
+
+        .flipped {
+            transform: rotateY(180deg);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Flip the Coin!</h1>
+    <img id="coin" src="/coin-images/coin-head.jpg" alt="Coin">
+    <br>
+    <button onclick="flipCoin()">Flip Coin</button>
+
+    <script>
+        function flipCoin() {
+            // Get the coin image element
+            const coin = document.getElementById('coin');
+
+            // Add a flipping animation class
+            coin.classList.add('flipped');
+
+            // Generate a random number between 0 and 1
+            const randomNumber = Math.random();
+
+            // Determine the result
+            const isHeads = randomNumber < 0.5;
+            const resultImage = isHeads ? '/coin-images/coin-head.jpg' : '/coin-images/coin-tail.avif';
+
+            // Update the image source after the animation ends
+            setTimeout(() => {
+                coin.src = resultImage;
+                coin.alt = isHeads ? 'Heads' : 'Tails';
+
+                // Remove the flipping class after animation
+                coin.classList.remove('flipped');
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
+

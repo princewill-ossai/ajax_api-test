@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Knewave&family=Racing+Sans+One&family=Shrikhand&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-image: url(/coin-images/photorealistic-style-clouds_23-2151058966.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  width: 60%;
+  height: 100vh;
+  margin: auto;
+  /* margin-top: 2rem; */
+  /* background-color: rgb(74, 74, 62); */
+  text-align: center;
+  padding-top: 8rem;
+  border-radius: 2rem;
+}
+
+input {
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+    border: none;
+    text-align: center;
+}
+
+input ::placeholder {
+    text-align: center;
+}
+
+button {
+    border-radius: 1rem;
+    background-color: yellowgreen;
+    color: white;
+    padding: 0.4em;
+    border: none;
+    cursor: pointer;
+}
+
+.display-result {
+    margin-top: 3rem;
+}

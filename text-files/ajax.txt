@@ -1,0 +1,19 @@
+Doing AJAX get request. Day1.
+
+CODE FOR DOING AJAX GET REQUEST
+
+let xhr = new XMLHttpRequest();
+xhr.open('GET', '/text-files/ajax.txt', true);
+xht.send()
+
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        document.getElementById('display').innerHTML = xhr.responseText
+    } else {
+        document.getElementById('display').innerHTML = '404'
+    }
+}
+
+xhr.onerror = function() {
+    alert('Request failed')
+}
